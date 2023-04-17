@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  elk:
+    image: sebp/elk:latest
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+    environment:
+      - ELASTICSEARCH_USER=demo
+      - ELASTICSEARCH_PASSWORD=demo
+      - LOGSTASH_USER=demo
+      - LOGSTASH_PASSWORD=demo
+      - KIBANA_USER=demo
+      - KIBANA_PASSWORD=demo
